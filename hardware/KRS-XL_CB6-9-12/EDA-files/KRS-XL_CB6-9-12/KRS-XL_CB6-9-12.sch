@@ -1,18 +1,18 @@
 EESchema Schematic File Version 4
-LIBS:Controllerboard_9TE-cache
+LIBS:KRS-XL_CB6-9-12-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "KRS-XL CB6-9-12"
-Date "2019-11-08"
-Rev "V01.00"
-Comp "SirSydom KNX Labs"
-Comment1 ""
-Comment2 "com@sirsydom.de"
+Date "2020-01-10"
+Rev "V01.01_work"
+Comp "KNX Makerstuff"
+Comment1 "by SirSydom <com@sirsydom.de>"
+Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "https://gitlab.com/knx-makerstuff/knx-rail-system-xl"
 $EndDescr
 $Comp
 L sirsydom:ItsyBitsyM0 GN2
@@ -203,8 +203,6 @@ F 3 "" H 10050 2400 50  0001 C CNN
 	1    10050 2400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10050 1000 10050 1100
 Wire Wire Line
 	10050 2300 10050 2400
 $Comp
@@ -1115,8 +1113,6 @@ F 3 "~" H 6200 3300 50  0001 C CNN
 	1    6200 3300
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5200 2800 5350 2800
 Connection ~ 5200 2800
 Wire Wire Line
 	6050 2750 6050 2800
@@ -1446,12 +1442,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0111
 U 1 1 5DD38741
-P 10050 1000
-F 0 "#PWR0111" H 10050 850 50  0001 C CNN
-F 1 "+3V3" H 10065 1173 50  0000 C CNN
-F 2 "" H 10050 1000 50  0001 C CNN
-F 3 "" H 10050 1000 50  0001 C CNN
-	1    10050 1000
+P 10050 800
+F 0 "#PWR0111" H 10050 650 50  0001 C CNN
+F 1 "+3V3" H 10065 973 50  0000 C CNN
+F 2 "" H 10050 800 50  0001 C CNN
+F 3 "" H 10050 800 50  0001 C CNN
+	1    10050 800 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1638,8 +1634,36 @@ Wire Wire Line
 Wire Wire Line
 	6350 3300 6350 3550
 Wire Wire Line
-	5350 2900 5350 2800
-Connection ~ 5350 2800
+	5200 2800 6050 2800
+$Comp
+L Device:CP C3
+U 1 1 5E19FBD3
+P 10400 900
+F 0 "C3" V 10655 900 50  0000 C CNN
+F 1 "100µF" V 10564 900 50  0000 C CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.3" H 10438 750 50  0001 C CNN
+F 3 "~" H 10400 900 50  0001 C CNN
+	1    10400 900 
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
-	5350 2800 6050 2800
+	10050 800  10050 900 
+Wire Wire Line
+	10250 900  10050 900 
+Connection ~ 10050 900 
+Wire Wire Line
+	10050 900  10050 1100
+$Comp
+L power:GND #PWR03
+U 1 1 5E1CF269
+P 10750 900
+F 0 "#PWR03" H 10750 650 50  0001 C CNN
+F 1 "GND" H 10755 727 50  0000 C CNN
+F 2 "" H 10750 900 50  0001 C CNN
+F 3 "" H 10750 900 50  0001 C CNN
+	1    10750 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 900  10750 900 
 $EndSCHEMATC
