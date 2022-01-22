@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "KRS-XL CB6-9-12"
-Date "2020-01-10"
-Rev "V01.01_work"
+Date "2022-01-22"
+Rev "V01.01"
 Comp "KNX Makerstuff"
 Comment1 "by SirSydom <com@sirsydom.de>"
 Comment2 ""
@@ -1666,4 +1666,6 @@ F 3 "" H 10750 900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10550 900  10750 900 
+Text Notes 10550 650  0    50   ~ 0
+C3 not in Layout
 $EndSCHEMATC

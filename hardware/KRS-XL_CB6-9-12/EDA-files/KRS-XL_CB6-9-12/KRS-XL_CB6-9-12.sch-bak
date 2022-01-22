@@ -8,11 +8,11 @@ Sheet 1 1
 Title "KRS-XL CB6-9-12"
 Date "2020-01-10"
 Rev "V01.01_work"
-Comp "SirSydom KNX Labs"
-Comment1 ""
-Comment2 "com@sirsydom.de"
+Comp "KNX Makerstuff"
+Comment1 "by SirSydom <com@sirsydom.de>"
+Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "https://gitlab.com/knx-makerstuff/knx-rail-system-xl"
 $EndDescr
 $Comp
 L sirsydom:ItsyBitsyM0 GN2
